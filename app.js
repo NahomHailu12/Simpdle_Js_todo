@@ -1,6 +1,3 @@
-console.log("JS is configred");
-todolist = []
-
 const form = document.getElementById("hidden");
 form.style.display = "none";
 let id = 0;
@@ -34,12 +31,12 @@ form.addEventListener("submit", (e) => {
                 const todo = document.createElement("tr");
                 todo.setAttribute("id", `tr-${id}`);
                 todo.innerHTML = `
-                <td>${lists.title}</td>
-                <td>${lists.task}</td>
-                <td>${lists.date}</td>
-                <td><button id="update-${id} " class = "btn btn-success" onclick="updateTask(${id})">Update</button></td>
-                <td><button id="delete-${id}" class = "btn btn-warning" onclick="document.getElementById('table').removeChild(document.getElementById('tr-${id}'))">Delete</button></td>
-                `;
+                                    <td>${lists.title}</td>
+                                    <td>${lists.task}</td>
+                                    <td>${lists.date}</td>
+                                    <td><button id="update-${id} " class = "btn btn-success" onclick="updateTask(${id})">Update</button></td>
+                                    <td><button id="delete-${id}" class = "btn btn-warning" onclick="document.getElementById('table').removeChild(document.getElementById('tr-${id}'))">Delete</button></td>
+                                    `;
                 table.appendChild(todo);
                 id++;
                 }
@@ -47,11 +44,11 @@ form.addEventListener("submit", (e) => {
         let tempid = `tr-${temp}`;
         row = document.getElementById(tempid);
         row.innerHTML = `
-                <td>${lists.title}</td>
-                <td>${lists.task}</td>
-                <td>${lists.date}</td>
-                <td><button id="update-${temp} " class = "btn btn-success" onclick="updateTask(${temp})">Update</button></td>
-                <td><button id="delete-${temp}" class = "btn btn-warning" onclick="document.getElementById('table').removeChild(document.getElementById('tr-${temp}'))">Delete</button></td>
+                            <td>${lists.title}</td>
+                            <td>${lists.task}</td>
+                            <td>${lists.date}</td>
+                            <td><button id="update-${temp} " class = "btn btn-success" onclick="updateTask(${temp})">Update</button></td>
+                            <td><button id="delete-${temp}" class = "btn btn-warning" onclick="document.getElementById('table').removeChild(document.getElementById('tr-${temp}'))">Delete</button></td>
                 `;
         indicator = false;
     }
